@@ -1,3 +1,6 @@
+---
+applyTo: "**/pt-pneuma-*/**"
+---
 # Pneuma Team Instructions
 
 ## GitHub Actions
