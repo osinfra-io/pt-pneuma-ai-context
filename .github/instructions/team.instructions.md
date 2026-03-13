@@ -14,8 +14,6 @@ Pneuma uses a three-tier deployment workflow:
 
 The main workspace deploys first, followed by regional workspaces (run in parallel across zones), then regional subdirectories (`cert-manager`, `datadog`, `istio`, `opa-gatekeeper`, `onboarding`) in dependency order.
 
-When modifying workflows, update the Mermaid diagram in `README.md` to reflect the changes.
-
 ## Repository Practices
 
 - Local development does not have access to OpenTofu state — plans and applies run exclusively in GitHub Actions.
