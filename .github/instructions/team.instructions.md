@@ -1,5 +1,5 @@
 ---
-applyTo: "**/pt-pneuma-*/**"
+applyTo: "**/pt-pneuma*/**"
 ---
 
 # Pneuma Team Instructions
