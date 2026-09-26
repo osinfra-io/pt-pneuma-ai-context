@@ -27,6 +27,6 @@ Add this repo alongside [pt-ai-context](https://github.com/osinfra-io/pt-ai-cont
 ```bash
 # ~/.zshrc or ~/.bashrc
 export COPILOT_CUSTOM_INSTRUCTIONS_DIRS="\
-$HOME/repositories/osinfra-io/platform-teams/pt-ai-context,\
-$HOME/repositories/osinfra-io/platform-teams/pneuma/pt-pneuma-ai-context"
+$HOME/repositories/osinfra-io/platform-group/pt-ai-context,\
+$HOME/repositories/osinfra-io/platform-group/pneuma/pt-pneuma-ai-context"
 ```
