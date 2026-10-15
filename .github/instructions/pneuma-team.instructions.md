@@ -6,4 +6,4 @@ applyTo: "**/pt-pneuma*/**"
 
 ## GitHub Actions
 
-After regional workspaces, subdirectory workspaces (`cert-manager`, `datadog`, `istio`, `opa-gatekeeper`, `onboarding`) deploy in dependency order.
+After regional workspaces, subdirectory workspaces (`agentgateway`, `authentik`, `cert-manager`, `datadog`, `istio`, `onboarding`, `opa-gatekeeper`, `openbao`) deploy in dependency order.
