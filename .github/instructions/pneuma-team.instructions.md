@@ -6,7 +6,7 @@ applyTo: "**/pt-pneuma*/**"
 
 ## GitHub Actions
 
-Pneuma's GKE clusters are regional and their node pools are zonal. Each deployment workspace is named for a zone (`us-east1-b`, `us-east4-a`), and workflow job names call them "Regional". Each zone deploys independently after `main`, and every job lists `main` in `needs:`.
+Pneuma's GKE clusters are regional and their node pools are zonal. Each deployment workspace is named for a zone (`us-east1-b`, `us-east4-a`), and workflow job names call them "Regional". Each zonal workflow starts after `main` (every job lists `main` in `needs:`), but some jobs have cross-zone dependencies, so zones are not fully independent (see below).
 
 After the zonal workspace, the subdirectory workspaces under `regional/` (`agentgateway`, `authentik`, `authentik-config`, `cert-manager`, `datadog`, `istio`, `onboarding`, `opa-gatekeeper`, `openbao`) deploy in this order. Treat the workflow `needs:` graph as the source of truth and keep this list in sync with it:
 
