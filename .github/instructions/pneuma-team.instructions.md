@@ -17,5 +17,3 @@ After the zonal workspace, the subdirectory workspaces under `regional/` (`agent
 5. `openbao-config` (after `openbao`, `authentik-config`, and `main`); the global OpenBao hostname routes only to `us-east1-b`
 6. Datadog manifests (after `datadog`); `opa-gatekeeper`, then its templates, then its constraints (after `cert-manager`)
 7. Istio test (after Istio manifests)
-
-`agentgateway` and its manifests deploy in sandbox, non-production, and production after `istio`; each environment's manifests wait for `authentik-config`.
