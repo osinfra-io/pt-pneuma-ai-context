@@ -15,6 +15,6 @@ Zone-scoped deployments live under `regional/`; environment-wide API configurati
 3. cert-manager Istio CSR (after `cert-manager`), then `istio`
 4. `authentik` (after `istio`; `us-east4-a` also waits for `us-east1-b`), then Istio manifests, then `config/authentik` (after both zones' Istio manifests)
 5. `config/openbao` (after `openbao`, `config/authentik`, and `main`); the global OpenBao hostname routes only to `us-east1-b`
-6. Datadog manifests (after `datadog`); `opa-gatekeeper`, then its templates, then its constraints (after `cert-manager`)
+6. Datadog manifests (after `datadog` where enabled; before `datadog` in disabled sandbox and non-production environments so `DatadogMonitor` finalizers can complete); `opa-gatekeeper`, then its templates, then its constraints (after `cert-manager`)
 7. Istio test (after Istio manifests)
 8. `config/datadog` (after all Istio Test workspaces, `config/authentik`, and `config/openbao`)
